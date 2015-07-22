@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">SpotifyMusic</string>
+    <string name="app_end_point">https://api.spotify.com</string>
+    <string name="app_auth_username"></string>
+    <string name="app_auth_password"></string>
+
+    <string name="action_settings">Settings</string>
+
+    <!-- Menu -->
+    <string name="login">Login</string>
+    <string name="store">Store</string>
+    <string name="library">Library</string>
+    <string name="search">Search</string>
+    <string name="setting">Setting</string>
+
+</resources>
