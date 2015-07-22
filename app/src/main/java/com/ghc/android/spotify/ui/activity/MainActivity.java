@@ -62,10 +62,13 @@ public class MainActivity extends BaseActivity {
 
         ActionBar actionBar = getActionBar();
         if(actionBar != null) {
+            mLogManager.log("Action bar");
             actionBar.show();
             actionBar.setLogo(R.drawable.ic_menu_white_36dp);
             actionBar.setDisplayUseLogoEnabled(true);
             actionBar.setDisplayShowHomeEnabled(true);
+        } else {
+            mLogManager.log("No action bar");
         }
 
         mDrawerList.setDivider(null);
@@ -111,8 +114,6 @@ public class MainActivity extends BaseActivity {
         DrawerItem drawerItem = mDrawerAdapter.getItem(position);
         createContent(drawerItem.getType());
     }
-
-
 
     public void showLoading(boolean show) {
         mPbLoading.setVisibility(show ? View.VISIBLE : View.GONE);

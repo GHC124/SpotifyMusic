@@ -7,6 +7,8 @@ import com.ghc.android.spotify.data.model.User;
 import com.ghc.android.spotify.user.UserComponent;
 import com.ghc.android.spotify.user.UserModule;
 
+import timber.log.Timber;
+
 /**
  * Created by ChungPV1 on 7/22/2015.
  */
@@ -19,6 +21,10 @@ public class SpotifyApplication extends Application {
         super.onCreate();
 
         mAppComponent = DaggerAppComponent.builder().appModule(new AppModule(this)).build();
+
+        if(BuildConfig.DEBUG){
+            Timber.plant(new Timber.DebugTree());
+        }
     }
 
     public static SpotifyApplication get(Context context){
